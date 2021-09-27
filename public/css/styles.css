@@ -8,32 +8,55 @@
 }
 
 body {
-    background-color: var(--amarillo);
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
+    box-sizing: border-box;
+    margin: 0;
 }
+
+
+/* Header */
+
+header {
+    background-color: var(--amarillo);
+}
+
+.nav-links {
+    display: none;
+}
+
 h2 {
     font-size: 24px;
+    margin: 0 auto;
+    padding: 20px 0;
+    color: var(--grisOscuro);
 }
+
 .precio {
     font-size: 18px;
 }
+
 .descuento .descripcion {
     font-size: 16px;
 }
+
 li {
     list-style: none;
 }
+
 ul {
     padding: 0px;
 }
+
 a {
     text-decoration: none;
     color: black;
 }
-.compra{
+
+.compra {
     text-align: center;
 }
+
 .burger-menu {
     background-color: var(--celeste);
     display: block;
@@ -44,39 +67,126 @@ a {
     text-align: center;
     border-radius: 8px;
 }
+
 .burger-menu i {
     display: block;
     font-size: 20px;
     text-align: center;
     line-height: 2;
 }
+
 .banner {
+    display: flex;
+    align-items: flex-end;
     margin-top: 24px;
 }
-img {
+
+
+/* main */
+
+main {
+    background-color: var(--grisClaro);
+}
+
+section {
+    width: 90%;
+    margin: 0 auto;
+}
+
+article img {
     display: block;
     margin: auto;
+    max-width: 100%;
 }
+
+article {
+    margin-bottom: 10px;
+}
+
+.logo-compra {
+    display: inline-block;
+    color: var(--verde);
+}
+
+.fa-truck {
+    position: absolute;
+    line-height: 2;
+    text-indent: 10px;
+}
+
+.fa-circle {
+    font-size: 50px;
+    font-weight: lighter;
+    position: relative;
+}
+
+.descuento {
+    color: var(--verde);
+}
+
+.descripcion {
+    display: none;
+}
+
+.info-producto {
+    background-color: white;
+    border-top: 1px solid var(--grisClaro);
+    padding: 15px;
+}
+
+.precio,
+.descuento {
+    margin: 0;
+}
+
+
+/* footer */
+
 footer {
     background-color: white;
     text-align: center;
     padding: 10px;
     margin: 0px;
 }
+
 footer section {
     margin: 20px auto;
-
 }
+
 footer section p {
     margin: 0px;
-
 }
+
 footer section i {
     font-size: 2em;
     color: var(--celeste);
     margin-bottom: 10px;
-
 }
+
 footer h3 {
     margin: 0 auto;
+}
+
+@media (min-width: 361px) {
+    .nav-links {
+        display: block;
+    }
+    .burger-menu {
+        display: none;
+    }
+    article {
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+    .descripcion {
+        display: block;
+    }
+}
+
+@media (min-width: 769px) {
+    .burger-menu {
+        display: none;
+    }
+    article {
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
 }
