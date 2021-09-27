@@ -167,6 +167,9 @@ footer h3 {
     margin: 0 auto;
 }
 
+
+/* Media Querys */
+
 @media (min-width: 361px) {
     .nav-links {
         display: block;
