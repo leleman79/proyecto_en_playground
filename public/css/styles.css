@@ -7,11 +7,15 @@
     --verde: #39b54a;
 }
 
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
-    box-sizing: border-box;
-    margin: 0;
 }
 
 
@@ -19,6 +23,7 @@ body {
 
 header {
     background-color: var(--amarillo);
+    padding: 10px;
 }
 
 .nav-links {
@@ -56,8 +61,45 @@ a {
 
 /* header */
 
+.logo {
+    width: 45%;
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+}
+
+.ser {
+    width: 90%;
+}
+
+.search-bar {
+    display: flex;
+}
+
+
+/* .logo-search {
+height: 60px;
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 10px;
+gap: 10px;
+} */
+
+.header-sin-banner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
 .compra {
     text-align: center;
+    font-size: 14px;
+    padding: 10px;
 }
 
 .burger-menu {
@@ -65,7 +107,7 @@ a {
     display: block;
     width: 40px;
     height: 40px;
-    margin: auto;
+    margin: 10px auto;
     color: white;
     text-align: center;
     border-radius: 8px;
@@ -79,9 +121,7 @@ a {
 }
 
 .banner {
-    display: flex;
-    align-items: flex-end;
-    margin-top: 24px;
+    display: block;
 }
 
 
@@ -107,29 +147,37 @@ article {
 }
 
 .logo-compra {
-    display: inline-block;
+    display: flex;
     color: var(--verde);
+    justify-content: flex-end;
+    align-items: flex-end;
 }
 
 .fa-truck {
     position: absolute;
     line-height: 2;
-    text-indent: 5px;
+    padding: 0px 5px;
+    font-size: 15px;
+    z-index: 2;
+    transition: 1.5s;
+}
+
+.fa-truck:hover {
+    transform: rotate(-90deg);
 }
 
 .circulo {
-    width: 40px;
-    height: 40px;
+    position: absolute;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     border: 2px solid var(--verde);
+    z-index: 1;
+    background-color: white;
 }
 
 .descuento {
     color: var(--verde);
-}
-
-.descripcion {
-    display: none;
 }
 
 .info-producto {
@@ -138,9 +186,18 @@ article {
     padding: 15px;
 }
 
-.precio,
+.flex {
+    display: flex;
+    justify-content: flex-start;
+    margin: 10px 0px;
+}
+
 .descuento {
-    margin: 0;
+    flex-grow: 0.7;
+}
+
+.precio {
+    flex-grow: 0.3;
 }
 
 
@@ -172,20 +229,174 @@ footer h3 {
 }
 
 
+/* Register.html */
+
+.registro-formulario {
+    width: 100%;
+    padding: 10px;
+    margin: 0 auto;
+    border: none;
+}
+
+.registro-input {
+    width: 100%;
+    border: none;
+    box-shadow: 1px 1px 2px var(--grisOscuro);
+    border-radius: 3px;
+    height: 20px;
+}
+
+input[type="file" i] {
+    width: 80%;
+}
+
+.registro-campos {
+    margin: 20px;
+}
+
+.registro-titulos {
+    margin: 10px 0;
+}
+
+.login {
+    text-align: center;
+    width: 90%;
+    height: 20vh;
+    margin: 0 auto;
+}
+
+.registro-botones-abajo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.registro-botones-abajo button {
+    width: 70px;
+    margin: 10px 0;
+    border: none;
+    background-color: var(--celeste);
+    height: 20px;
+    border-radius: 3px;
+    color: white;
+    box-shadow: 1px 1px 2px var(--grisOscuro);
+}
+
+.registro-perfil input {
+    margin: 5px 10px;
+    box-shadow: 1px 1px 2px var(--grisOscuro);
+}
+
+.login-flex {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.login-button button {
+    width: 100%;
+    border: none;
+    height: 20px;
+    border-radius: 3px;
+    color: white;
+    box-shadow: 1px 1px 2px var(--grisOscuro);
+    background-color: var(--celeste);
+    transition: .5s;
+}
+
+.login-button button:hover {
+    background-color: #0022AA;
+}
+
+.login-button button a {
+    color: white;
+}
+
+
 /* Media Querys */
 
 @media (min-width: 361px) {
-    .nav-links {
-        display: block;
+    .header-sin-banner {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+        margin: 15px;
     }
     .burger-menu {
         display: none;
     }
+    .logo,
+    .search,
+    .compra {
+        width: 30%;
+        padding: 0px;
+    }
+    .compra p {
+        font-size: 14px;
+    }
+    .nav-links {
+        font-size: 12px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .nav-links-right,
+    .nav-links-left {
+        display: flex;
+        padding: 5px;
+        gap: 10px;
+    }
+    .con-flex {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    .descuento {
+        flex-grow: 0.7;
+    }
+    .precio {
+        flex-grow: 0.3;
+    }
     article {
+        max-width: 45%;
+        height: auto;
+        transition: .4s;
+    }
+    article:hover {
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
     }
     .descripcion {
+        cursor: pointer;
         display: block;
+        color: white;
+        transition: .3s;
+    }
+    .descripcion:hover {
+        color: black;
+    }
+    .registro-formulario {
+        width: 75%;
+        padding: 20px;
+    }
+    .registro-botones-abajo {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .login-flex {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .login-button button {
+        width: 100%;
+        border: none;
+        background-color: var(--celeste);
+        height: 20px;
+        border-radius: 3px;
+        color: white;
+        box-shadow: 1px 1px 2px var(--grisOscuro);
+        padding: 0 20px;
     }
 }
 
@@ -193,7 +404,60 @@ footer h3 {
     .burger-menu {
         display: none;
     }
+    .compra p {
+        font-size: 16px;
+    }
     article {
-        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+        /* box-shadow: 0px 0px 10px rgb(100, 100, 100); */
+        max-width: 24%;
+        height: auto;
+    }
+    .nav-links {
+        font-size: 16px;
+    }
+    .registro-formulario {
+        width: 50%;
+        padding: 20px;
+    }
+    input#domicilio.registro-input {
+        margin-top: 40px;
+    }
+    .perfil-usuario {
+        display: flex;
+        flex-direction: column;
+        line-height: 1.5;
+    }
+    .registro-botones-abajo {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .login-flex {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .login-input {
+        width: 300px;
+    }
+    .flex-footer {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .footer-section {
+        width: 25%;
+    }
+    h3 {
+        font-size: 16px;
+    }
+    .footer-section p {
+        font-size: 14px;
+    }
+    .iconito {
+        transition: .3s ease-in-out;
+    }
+    .iconito:hover {
+        color: #0022AA;
+        transform: scale(1.1);
     }
 }
