@@ -16,6 +16,6 @@ app.get('/login', (req, res) => {
 
 app.use(express.static('public'));
 
-app.listen(3030, () => {
-    console.log('Servidor corriendo en puerto 3030');
+app.listen(process.env.PORT || 3000, function() {
+    console.log('Servidor corriendo en puerto 3000');
 });
