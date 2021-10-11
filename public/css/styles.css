@@ -281,6 +281,12 @@ input[type="file" i] {
     border-radius: 3px;
     color: white;
     box-shadow: 1px 1px 2px var(--grisOscuro);
+    transition: .5s;
+}
+
+.registro-botones-abajo button:hover {
+    background-color: #0022AA;
+    cursor: pointer;
 }
 
 .registro-perfil input {
@@ -307,10 +313,16 @@ input[type="file" i] {
 
 .login-button button:hover {
     background-color: #0022AA;
+    cursor: pointer;
 }
 
 .login-button button a {
     color: white;
+}
+
+.no-registrado {
+    font-size: 14px;
+    margin: 20px;
 }
 
 
