@@ -68,6 +68,7 @@ a {
 .search {
     display: flex;
     justify-content: center;
+    width: 50%;
 }
 
 .ser {
@@ -340,10 +341,16 @@ input[type="file" i] {
         display: none;
     }
     .logo,
-    .search,
     .compra {
         width: 30%;
         padding: 0px;
+    }
+    .search {
+        width: 40%;
+    }
+    .search-bar {
+        width: 80%;
+        justify-content: space-around;
     }
     .compra p {
         font-size: 14px;
